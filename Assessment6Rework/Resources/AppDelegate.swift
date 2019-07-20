@@ -15,8 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+        // Set a placeholder completion boolean.
+        var completion: Bool = false
+        // Attempt to load from persistance.
+        EntryController.sharedInstance.loadFromPersistentStore { (success) in
+            // If successful, set placeholder completion to true
+            if success {
+                completion = success
+            // Else set it to false.
+            } else {
+                completion = false
+            }
+        }
+        // Return the completion value.
+        return completion
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
