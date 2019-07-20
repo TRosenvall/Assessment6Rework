@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PairRandomizerViewController.swift
 //  Assessment6Rework
 //
 //  Created by Timothy Rosenvall on 7/20/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PairRandomizerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
