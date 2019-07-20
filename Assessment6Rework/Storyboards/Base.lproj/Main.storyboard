@@ -20,7 +20,10 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhP-1U-5NT">
                                 <rect key="frame" x="20.5" y="812" width="373" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Randomize"/>
+                                <connections>
+                                    <action selector="randomizerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e9F-Rc-zTm"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GUQ-ef-GnM">
                                 <rect key="frame" x="0.0" y="88" width="414" height="704"/>
@@ -54,8 +57,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Pair Randomizer" id="d2W-fK-6JW">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9DI-XO-seu"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9DI-XO-seu">
+                            <connections>
+                                <action selector="addNewEntryButtonTapped:" destination="BYZ-38-t0r" id="JEA-6q-clr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="entriesTableView" destination="GUQ-ef-GnM" id="tuz-0I-20S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
